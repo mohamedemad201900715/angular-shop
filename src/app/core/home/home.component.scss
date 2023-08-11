@@ -1,6 +1,6 @@
 :host{
 display: flex;
-    height: calc(100% - (209px + 98px));
+    min-height: calc(100% - (209px + 98px));
     justify-content: center;
     align-items: center;
   }
