@@ -1,0 +1,7 @@
+<div class="boxes">
+  <div class="box" *ngFor="let product of products;" (click)="navigate(product.id)" >
+      <img src= '{{ product.thumbnail }}' alt="stew">
+      <p class="head">{{ product.title }} </p>
+      <p class="Recap">{{product.description}}</p>
+  </div>
+</div>
