@@ -1,5 +1,7 @@
 :host{
   width: 100vw;
+  min-height: calc(100% - (209px + 98px));
+
 }
 .boxes{
   display: flex;
