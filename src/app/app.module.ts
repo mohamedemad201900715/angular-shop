@@ -17,7 +17,7 @@ import { ProductComponent } from './core/product/product.component';
     FooterComponent,
     ProductsComponent,
     HomeComponent,
-    ProductComponent
+    ProductComponent,
   ],
   imports: [
     BrowserModule,

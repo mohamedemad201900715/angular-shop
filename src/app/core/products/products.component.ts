@@ -1,6 +1,6 @@
 import { Component , OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { ServiceService } from 'src/app/services/service.service';
 import axios from 'axios';
 @Component({
   selector: 'app-products',
@@ -9,19 +9,18 @@ import axios from 'axios';
 })
 export class ProductsComponent {
   products!: any ;
-  constructor(private router: Router) {}
+  loading:boolean= true;
+  constructor(private router: Router, private service: ServiceService) { }
 ngOnInit() :void {
   this.fetchData();
 }
 fetchData(){
-  axios.get('https://dummyjson.com/products')
-  .then(response => {
-    this.products = response.data.products;
+      this.service.getPruducts().subscribe(response => {
+    this.loading = true
+    this.products = response.products;
     console.log(this.products);
+    this.loading=false;
   })
-  .catch(error => {
-    console.error('Error fetching data:', error);
-  });
 }
 navigate(id: number) {
   this.router.navigate(['/product', id]);

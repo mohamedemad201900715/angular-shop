@@ -1,4 +1,5 @@
-<div class="content" *ngIf="product">
+<app-spinner-loading *ngIf="loading"></app-spinner-loading>
+<div class="content" *ngIf=" !loading">
   <h1>{{product.title}}</h1>
   <p class="description"><span>Description:</span> {{product.description}}</p>
   <div class="price-info">
@@ -12,7 +13,7 @@
   <p><span>category:</span> {{product.category}}</p>
 </div>
 </div>
-<div class="slider-container" *ngIf="product">
+<div class="slider-container" *ngIf="!loading">
 <div class="slider" >
    <img *ngFor="let image of product.images; let i = index" src="{{image}}"  alt="Image" [style.display]="currentIndex === i ? 'block' : 'none'">
 </div>

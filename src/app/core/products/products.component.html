@@ -1,4 +1,5 @@
-<div class="boxes">
+<div class="boxes"  >
+  <app-spinner-loading *ngIf="loading"></app-spinner-loading>
   <div class="box" *ngFor="let product of products;" (click)="navigate(product.id)" >
       <img src= '{{ product.thumbnail }}' alt="stew">
       <p class="head">{{ product.title }} </p>
