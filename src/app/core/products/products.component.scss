@@ -3,6 +3,18 @@
   min-height: calc(100% - (209px + 98px));
 
 }
+::ng-deep starfillicon {
+  color: #d8d80a;
+}
+  ::ng-deep svg{
+    width: 30px;
+    height: 30px;
+  }
+  p-rating{
+  display: flex;
+    justify-content: center;
+    margin: 9px 0 0 0;
+  }
 .boxes{
   padding-left: 80px;
   padding-right: 80px;
@@ -72,7 +84,7 @@ img{
 display: flex;
     align-items: center;
     margin-top: 20px;
-    cursor: pointer;
+    // cursor: pointer;
   }
 .price{
   color: rgb(237,140,18);

@@ -31,4 +31,5 @@ ngOnInit() :void {
 displayImage(index: number): void {
   this.currentIndex = index;
 }
+
 }

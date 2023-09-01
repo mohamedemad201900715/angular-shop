@@ -9,6 +9,8 @@ import { SharedModule } from './shared/shared.module';
 import { ProductsComponent } from './core/products/products.component';
 import { HomeComponent } from './core/home/home.component';
 import { ProductComponent } from './core/product/product.component';
+import { RatingModule } from 'primeng/rating';
+import { FormsModule } from '@angular/forms'; // Import FormsModule
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ProductComponent } from './core/product/product.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    RatingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

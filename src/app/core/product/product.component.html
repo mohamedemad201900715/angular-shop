@@ -1,20 +1,23 @@
 <app-spinner-loading *ngIf="loading"></app-spinner-loading>
+<div class="slider-container" *ngIf="!loading">
+  <div class="slider" >
+     <img src="{{product.image}}"  alt="Image">
+  </div>
+   <div class="thumbnail-gallery" >
+   </div>
+  </div>
 <div class="content" *ngIf=" !loading">
   <h1>{{product.title}}</h1>
-  <p class="description"><span>Description:</span> {{product.description}}</p>
+  <p class="description">{{product.description}}</p>
   <div class="price-info">
-  <p class="price"><span>price:</span> {{product.price}}$</p>
+  <p class="price">{{product.price}} $</p>
 </div>
 <div class="information">
-  <p><span>rating:</span> {{product.rating.rate}}</p>
+  <p-rating [(ngModel)]="product.rating.rate" [readonly]="true" [cancel]="false"></p-rating>
   <p><span>stock:</span> {{product.rating.count}}</p>
   <p><span>category:</span> {{product.category}}</p>
 </div>
+<button><i class="fa-solid fa-bag-shopping"></i> ADD To Cart</button>
+
 </div>
-<div class="slider-container" *ngIf="!loading">
-<div class="slider" >
-   <img src="{{product.image}}"  alt="Image">
-</div>
- <div class="thumbnail-gallery" >
- </div>
-</div>
+
