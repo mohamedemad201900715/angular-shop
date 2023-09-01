@@ -1,8 +1,13 @@
 <div class="boxes"  >
   <app-spinner-loading *ngIf="loading"></app-spinner-loading>
-  <div class="box" *ngFor="let product of products;" (click)="navigate(product.id)" >
-      <img src= '{{ product.thumbnail }}' alt="stew">
-      <p class="head">{{ product.title }} </p>
-      <p class="Recap">{{product.description}}</p>
+  <div class="box" *ngFor="let product of products;" >
+      <img src= '{{ product.image }}' alt="image" (click)="navigate(product.id)">
+      <div class="details" (click)="navigate(product.id)">
+      <p class="head" >{{ product.title }} </p >
+      <p class="price"> ${{ product.price }}</p>
+    </div>
+      <div class="flex-cart">
+      <button><i class="fa-solid fa-bag-shopping"></i> ADD To Cart</button>
+    </div><!-- <p class="Recap">{{product.description}}</p> -->
   </div>
 </div>

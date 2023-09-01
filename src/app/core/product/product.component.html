@@ -4,22 +4,17 @@
   <p class="description"><span>Description:</span> {{product.description}}</p>
   <div class="price-info">
   <p class="price"><span>price:</span> {{product.price}}$</p>
-  <p class="discount"><Span>discount:</Span> {{product.discountPercentage}} %</p>
 </div>
 <div class="information">
-  <p><span>rating:</span> {{product.rating}}</p>
-  <p><span>stock:</span> {{product.stock}}</p>
-  <p><span>brand:</span> {{product.brand}}</p>
+  <p><span>rating:</span> {{product.rating.rate}}</p>
+  <p><span>stock:</span> {{product.rating.count}}</p>
   <p><span>category:</span> {{product.category}}</p>
 </div>
 </div>
 <div class="slider-container" *ngIf="!loading">
 <div class="slider" >
-   <img *ngFor="let image of product.images; let i = index" src="{{image}}"  alt="Image" [style.display]="currentIndex === i ? 'block' : 'none'">
+   <img src="{{product.image}}"  alt="Image">
 </div>
  <div class="thumbnail-gallery" >
-   <div class="thumbnails" >
-     <img src="{{image}}" *ngFor="let image of product.images; let i = index" alt="Thumbnail" (mouseover)="displayImage(i)">
-   </div>
  </div>
 </div>
