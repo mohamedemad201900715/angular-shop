@@ -1,0 +1,10 @@
+
+  <img src= '{{ product.image }}' alt="image" (click)="navigate(product.id)">
+  <p-rating [(ngModel)]="product.rating.rate" [readonly]="true" [cancel]="false" (click)="navigate(product.id)"></p-rating>
+  <div class="details" >
+  <p class="head" >{{ product.title }} </p >
+  <p class="price"> ${{ product.price }}</p>
+</div>
+  <div class="flex-cart">
+  <button (click)="add()"><i class="fa-solid fa-bag-shopping"></i> ADD To Cart</button>
+</div>

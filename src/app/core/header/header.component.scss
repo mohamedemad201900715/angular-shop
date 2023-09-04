@@ -1,6 +1,11 @@
-
-.header{
+:host{
+  position: sticky;
+  z-index: 100;
+  top: 0;
   width: 100%;
+}
+.header{
+  position: relative;
   background-color: aqua;
 }
 .header .container{
@@ -46,11 +51,22 @@ right: 100%;
 transition: all 0.3s linear;
 }
 a.active ,
-.nav-bar li:hover a{
+.nav-bar li:hover a,
+.nav-bar li:hover a pre
+{
 color: #19c8fa;
+background-color: transparent;
 }
 a.active::before,
 .nav-bar li:hover a::before
 {
 right: 0;
+}
+
+.cart pre{
+  display: inline;
+  background-color: #e97474;
+  border-radius: 50%;
+  color: white;
+  transition: all 0.3s linear;
 }

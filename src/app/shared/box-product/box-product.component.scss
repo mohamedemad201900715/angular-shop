@@ -1,0 +1,79 @@
+:host{
+display: flex;
+justify-content: center;
+flex-direction: column;
+margin-top: 35px;
+background-color: white;
+box-shadow: 0 0 10px 5px #e2e3e5;
+border-radius: 150px;
+ position: relative;
+ min-height: 500px;
+ padding: 50px 50px 0 50px;
+ max-width: 380px;
+}
+
+::ng-deep starfillicon {
+  color: #d8d80a;
+}
+  ::ng-deep svg{
+    width: 30px;
+    height: 30px;
+  }
+  p-rating{
+  display: flex;
+    justify-content: center;
+    margin: 9px 0 0 0;
+  }
+p{
+      margin: 0;
+}
+button{
+  border: none;
+  outline: none;
+  background-color: rgb(255,250,244);
+  border: 1px solid rgb(228,228,229);
+  font-size: 19px;
+  padding: 14px;
+  border-radius: 26px;
+  cursor: pointer;
+}
+img{
+  border-radius: 50%;
+  width: 270px;
+    height: 242px;
+  cursor: pointer;
+}
+.head {
+  font-size: 20px;
+  font-weight: 900;
+  padding: 0;
+  margin-right: 20px;
+  color: #4b5563;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 520px) {
+  .boxes > div{
+    padding: 20px;
+    padding: 20px;
+  }
+}
+.flex-cart{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.details{
+display: flex;
+    align-items: center;
+    margin-top: 20px;
+    // cursor: pointer;
+  }
+.price{
+  color: rgb(237,140,18);
+    font-size: 22px;
+    font-weight: bold;
+}

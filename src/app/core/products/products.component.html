@@ -1,15 +1,14 @@
+<div class="select-categorey" >
+  <label for="Categories">Categories:</label>
+<select name="Categories" id="" (change)="filterCategory($event)">
+  <option value="All" selected>All</option>
+  <option *ngFor="let category of Categories" value="{{category}}">{{category}}</option>
+</select>
+</div>
 <app-spinner-loading *ngIf="loading"></app-spinner-loading>
-<div class="boxes"  >
 
-  <div class="box" *ngFor="let product of products;" >
-      <img src= '{{ product.image }}' alt="image" (click)="navigate(product.id)">
-      <p-rating [(ngModel)]="product.rating.rate" [readonly]="true" [cancel]="false" (click)="navigate(product.id)"></p-rating>
-      <div class="details" >
-      <p class="head" >{{ product.title }} </p >
-      <p class="price"> ${{ product.price }}</p>
-    </div>
-      <div class="flex-cart">
-      <button><i class="fa-solid fa-bag-shopping"></i> ADD To Cart</button>
-    </div>
-  </div>
+<div class="boxes" *ngIf="!loading">
+  <div class="box"*ngFor="let product of products;">
+  <app-box-product [product]="product" (item)="addToCart($event)"></app-box-product>
+</div>
 </div>

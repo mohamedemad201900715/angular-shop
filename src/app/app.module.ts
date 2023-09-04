@@ -10,7 +10,8 @@ import { ProductsComponent } from './core/products/products.component';
 import { HomeComponent } from './core/home/home.component';
 import { ProductComponent } from './core/product/product.component';
 import { RatingModule } from 'primeng/rating';
-import { FormsModule } from '@angular/forms'; // Import FormsModule
+import { FormsModule } from '@angular/forms';
+import { BoxProductComponent } from './shared/box-product/box-product.component'; // Import FormsModule
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule
     ProductsComponent,
     HomeComponent,
     ProductComponent,
+    BoxProductComponent,
   ],
   imports: [
     BrowserModule,
