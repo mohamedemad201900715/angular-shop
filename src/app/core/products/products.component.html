@@ -6,7 +6,6 @@
 </select>
 </div>
 <app-spinner-loading *ngIf="loading"></app-spinner-loading>
-
 <div class="boxes" *ngIf="!loading">
   <div class="box"*ngFor="let product of products;">
   <app-box-product [product]="product" (item)="addToCart($event)"></app-box-product>
